@@ -18,7 +18,7 @@ ws.on("open", () => {
 	ws.send({"type":"hello","data":{"last_message":-1},"auth":"google","token":yttoken})
 	ws.send({"type":"status","data":{},"auth":"google","token":yttoken})
 	console.log("Connected successfully!")
-}
+})
 
 ircClient.addListener("message#",(from,to,msg)=>{
 	ws.send(JSON.stringify({"auth":"google","token":yttoken,"type":"message","data":{text:`<${from}> ${msg}`}}))
