@@ -1,0 +1,9 @@
+{
+	"token": "yt oauth token go here",
+	"botName": "IRCkc",
+	"ircServer": "irc.libera.chat",
+	"ircPort": 6667,
+	"ircSsl": false,
+	"ircChannels": ["#chatkc"],
+	"chatkcServer": "wss://server.mattkc.com:2002"
+}
