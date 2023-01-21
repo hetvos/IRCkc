@@ -15,8 +15,7 @@ const wsc = require("ws");
 const ws = new wsc(config.chatkcServer);
 
 ws.on("open", () => {
-	ws.send({"type":"hello","data":{"last_message":-1},"auth":"google","token":yttoken})
-	ws.send({"type":"status","data":{},"auth":"google","token":yttoken})
+	ws.send(JSON.stringify({"type":"status","data":{},"auth":"google","token":yttoken}))
 	console.log("Connected successfully!")
 })
 
