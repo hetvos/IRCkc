@@ -16,6 +16,7 @@ const ws = new wsc(config.chatkcServer);
 
 ws.on("open", () => {
 	ws.send(JSON.stringify({"type":"status","data":{},"auth":"google","token":yttoken}))
+	setInterval(()=>{ws.send(JSON.stringify({"type":"status","data":{},"auth":"google","token":yttoken}))},180000)
 	console.log("Connected successfully!")
 })
 
